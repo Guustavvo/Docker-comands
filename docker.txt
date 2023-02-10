@@ -1,0 +1,52 @@
+Docker container run -it ubuntu
+R: -i para permitir nossa interação com o container e -t chamar o terminal (se for sua primeira vez em contato com o docker, com esse comando ele ira buscar uma imagem em seu local, porem como voce não a possui ele automaticamente faz um pull dessa image (exemplo a do Ubuntu) 
+
+comando executado com exito:
+
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+677076032cca: Pull complete 
+Digest: sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+Status: Downloaded newer image for ubuntu:latest
+root@f58571627060:/# xit
+bash: xit: command not found
+root@f58571627060:/# cd ..                          
+root@f58571627060:/# exit
+exit
+ 
+Docker container run -d ubuntu
+R: -d permiti que voce execute um container em segundo plano, sem precisar rolar interação.
+ 
+Docker ps:
+R: Possibilita listar os containers que estão ativos.
+
+Docker ps -a:
+R: Lista todos os containers (ativos e desligados)
+
+
+Docker rm (ID container)
+R: Remove um container desligado.
+
+Docker rm --force (ID container)
+R: Remove um container em execução (--force força a a remoção do container.)
+
+Docker start (Id do contaiener)
+R: deixa um container UP
+
+Docker stop  (Id do contaiener)
+R: Para a execução de um determinado container.
+
+Docker images.
+R: LIsta as images que voce possui em seu local.
+
+Docker container inspect (Id container)
+R: Possibilita ver os detalhes do seu container.
+
+docker image inspect (Nome da imagem).
+R: Possibilita ver os detalhes de sua imagem.
+
+Docker rmi (id da Imagem)   
+R: Remove uma imagem. (A imagem só sera removida se o container que está utilizando ela for morto.)
+
+Docker volume create (nome do banco)
+R: Cria um volume para seu banco de dados local.
